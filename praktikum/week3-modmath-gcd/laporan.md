@@ -157,7 +157,7 @@ Dengan demikian, kesulitan menyelesaikan logaritma diskrit pada modulus besar me
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Dari percobaan yang telah dilakukan, dapat disimpulkan bahwa operasi aritmetika modular seperti penjumlahan, perkalian, eksponensiasi, serta perhitungan GCD, invers modular, dan logaritma diskrit telah berhasil dijalankan dengan benar menggunakan Python. Seluruh hasil yang diperoleh sesuai dengan teori dan menunjukkan bahwa konsep modular aritmetika memiliki peran penting dalam membangun sistem kriptografi modern, seperti RSA dan Diffie-Hellman, yang bergantung pada sifat perulangan dan kesulitan pembalikan operasi matematis pada modulus besar.
 
 ---
 
