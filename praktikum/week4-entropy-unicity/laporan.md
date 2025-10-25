@@ -151,9 +151,9 @@ Contoh:
 ```
     week4_entropy-unicity
 
-commit 34c8bb18d3f87238336c46d27a09de1ef755d886
+commit cb728d597f5ccf5c8c40faf8aad13629e35f0cf9
 Author:  <>
-Date:   Fri Oct 24 23:23:39 2025 +0700
+Date:   Sat Oct 25 20:20:39 2025 +0700
 
     week4-entropy-unicity: implementasi entropy & unicity dan laporan )
 ```
