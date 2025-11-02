@@ -170,7 +170,7 @@ print("Ciphertext:", enc)
 print("Decrypted :", dec)
 
 )
-
+```
 ---
 
 ## 6. Hasil dan Pembahasan
@@ -204,7 +204,8 @@ Secara umum, cipher substitusi mengandalkan perubahan karakter, sedangkan cipher
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+
+Dari praktikum ini, dapat disimpulkan bahwa cipher klasik seperti Caesar, Vigenère, dan Transposisi merupakan dasar penting dalam memahami konsep enkripsi dan dekripsi pada kriptografi. Meskipun tekniknya sederhana dan mudah diimplementasikan dengan Python, cipher klasik memiliki kelemahan dalam hal keamanan karena masih mempertahankan pola huruf asli dan mudah diserang dengan analisis frekuensi. Namun, pembelajaran cipher klasik membantu mahasiswa memahami prinsip kerja dasar yang menjadi fondasi bagi sistem kriptografi modern.
 
 ---
 
