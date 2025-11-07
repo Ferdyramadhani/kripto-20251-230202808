@@ -147,9 +147,10 @@ Contoh:
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+ Delete praktikum/week6-cipher-modern/screenshots
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+commit c53418f7ff1be16a6aa6b2a9eafa19759ab977fc
+Author: Ferdyramadhani <164123953+Ferdyramadhani@users.noreply.github.com>
+Date:   Fri Nov 7 20:54:06 2025 +0700
+
 ```
