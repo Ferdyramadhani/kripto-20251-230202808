@@ -95,7 +95,7 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Berdasarkan percobaan yang dilakukan, protokol Diffie–Hellman berhasil menunjukkan bagaimana dua pihak dapat menghasilkan sebuah shared secret key yang sama meskipun bertukar informasi melalui saluran publik. Simulasi program juga menunjukkan bahwa nilai kunci bersama yang dihasilkan Alice dan Bob identik, sehingga mekanisme pertukaran kunci berjalan sesuai teori. Namun, percobaan ini juga menegaskan bahwa Diffie–Hellman murni masih rentan terhadap serangan Man-in-the-Middle, sehingga diperlukan penambahan autentikasi agar proses pertukaran kunci benar-benar aman.
 
 ---
 
