@@ -76,9 +76,9 @@ print("Kunci bersama Bob   :", shared_secret_B)
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
+![Hasil Eksekusi](screenshots/outputt.png)
+![Hasil Input](screenshots/inputt.png)
+![Hasil Output](screenshots/outputt.png)
 )
 
 ---
