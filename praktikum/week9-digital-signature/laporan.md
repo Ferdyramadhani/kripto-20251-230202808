@@ -90,9 +90,9 @@ except (ValueError, TypeError):
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
+![Hasil Eksekusi](screenshot/output.png)
+![Hasil Input](screenshot/input.png)
+![Hasil Output](screenshot/output.png)
 )
 
 ---
