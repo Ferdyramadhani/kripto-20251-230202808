@@ -1,20 +1,24 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 11  
+Topik: [Secret-sharing]  
+Nama: [Ferdy Ramadhani]  
+NIM: [230202808]  
+Kelas: [5IKRA]  
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Tujuan dari praktikum ini adalah:
+1. Menjelaskan konsep Shamir Secret Sharing (SSS).
+2. Melakukan simulasi pembagian rahasia ke beberapa pihak menggunakan skema SSS.
+3. Menganalisis keamanan skema distribusi rahasia berbasis threshold.
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Shamir’s Secret Sharing adalah metode kriptografi untuk membagi sebuah rahasia menjadi beberapa bagian (share), di mana rahasia hanya dapat dipulihkan jika jumlah bagian minimum (threshold) digabungkan. Metode ini meningkatkan keamanan dengan mencegah satu pihak tunggal menguasai seluruh rahasia.
+
+Skema ini menggunakan prinsip interpolasi polinomial, di mana rahasia disimpan sebagai konstanta polinomial. Share yang jumlahnya kurang dari threshold tidak memberikan informasi apa pun tentang rahasia, sedangkan share yang memenuhi threshold dapat merekonstruksi rahasia secara utuh.
 
 ---
 
@@ -40,9 +44,20 @@ Contoh format:
 Gunakan blok kode:
 
 ```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
+from secretsharing import SecretSharer
+
+secret_text = "KriptografiUPB2025"
+
+secret_hex = secret_text.encode("utf-8").hex()
+
+# Membagi rahasia menjadi 5 share dengan threshold 3
+shares = SecretSharer.split_secret(secret_hex, 3, 5)
+print("Shares:", shares)
+
+recovered_hex = SecretSharer.recover_secret(shares[:3])
+
+recovered_text = bytes.fromhex(recovered_hex).decode("utf-8")
+print("Recovered secret:", recovered_text)
 ```
 )
 
@@ -64,32 +79,34 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+1. Apa keuntungan utama Shamir Secret Sharing dibanding membagikan salinan kunci secara langsung?
+   - euntungan utama Shamir’s Secret Sharing dibanding membagikan salinan kunci secara langsung adalah keamanan dan keandalan yang lebih tinggi. Pada pembagian salinan kunci, jika satu salinan bocor maka seluruh kunci langsung terkompromi. Sebaliknya, pada Shamir Secret Sharing, satu atau beberapa share yang bocor tidak mengungkapkan apa pun tentang kunci selama belum mencapai jumlah ambang (threshold).
+2. Apa peran threshold (k) dalam keamanan secret sharing?
+   - hreshold (k) berperan sebagai batas minimum jumlah share yang harus digabungkan untuk merekonstruksi sebuah rahasia. Jika jumlah share yang tersedia kurang dari k, maka rahasia tidak dapat diketahui sama sekali, sehingga informasi tetap aman meskipun beberapa share bocor.
+Dalam konteks keamanan, nilai k menentukan tingkat perlindungan dan toleransi kegagalan. Semakin besar nilai k, semakin sulit bagi pihak tidak berwenang untuk mengakses rahasia, tetapi ketersediaan sistem menjadi lebih rendah. Sebaliknya, nilai k yang lebih kecil meningkatkan kemudahan pemulihan rahasia, namun dengan tingkat keamanan yang lebih rendah.
+3. Contoh skenario nyata penggunaan SSS
+   - Pengamanan private key cryptocurrency di mana kunci dibagi ke beberapa pemilik, dan hanya kombinasi tertentu yang dapat melakukan transaksi.
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Berdasarkan praktikum yang telah dilakukan, Shamir Secret Sharing (SSS) terbukti mampu membagi dan merekonstruksi rahasia secara aman menggunakan mekanisme threshold. Hasil percobaan menunjukkan bahwa rahasia hanya dapat dipulihkan ketika jumlah share yang digunakan memenuhi nilai ambang yang ditentukan.
+
+Skema ini efektif meningkatkan keamanan distribusi kunci karena kebocoran satu atau beberapa share tidak mengungkapkan informasi rahasia. Dengan demikian, Shamir Secret Sharing cocok diterapkan pada sistem yang membutuhkan keamanan tinggi, keandalan, dan toleransi kegagalan dalam pengelolaan rahasia.
 
 ---
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
-
+- Hineman, A., & Blaum, M. (2022).
+- Malinda, D. N., Kusyanti, A., & Bakhtiar, F. A. (2022).
 ---
 
 ## 10. Commit Log
 (Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+commit week11-secret-sharing
+Author: Ferdy Ramadhani <ferdyramadhani225@gmail.com>
+Date:   2025-12-27
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    week11-secret-sharing: implementasi dan laporan Shamir Secret Sharing
 ```
